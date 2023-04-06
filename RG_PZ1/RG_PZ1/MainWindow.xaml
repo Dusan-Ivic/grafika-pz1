@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RG_PZ1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="700" Width="650" WindowStartupLocation="CenterScreen">
+    <DockPanel Background="LightGray">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Load Entities" Name="LoadEntitiesButton" Click="LoadEntitiesButton_Click" />
+            <MenuItem Header="_Draw Ellipse" Name="DrawEllipseButton" Click="DrawEllipseButton_Click" />
+            <MenuItem Header="_Draw Polygon" Name="DrawPolygonButton" Click="DrawPolygonButton_Click" />
+            <MenuItem Header="_Add Text" Name="AddTextButton" Click="AddTextButton_Click" />
+            <MenuItem Header="_Undo" Name="UndoButton" Click="UndoButton_Click" />
+            <MenuItem Header="_Redo" Name="RedoButton" Click="RedoButton_Click" />
+            <MenuItem Header="_Clear" Name="ClearButton" Click="ClearButton_Click" />
+        </Menu>
+
+        <Slider Name="ZoomSlider" Minimum="1" Maximum="10" Value="1" DockPanel.Dock="Top" />
+        <ScrollViewer HorizontalScrollBarVisibility="Visible">
+            <Canvas Name="CanvasMap" Width="600" Height="600" Background="White" MouseLeftButtonDown="CanvasMap_MouseLeftButtonDown" MouseRightButtonDown="CanvasMap_MouseRightButtonDown">
+                <Canvas.LayoutTransform>
+                    <ScaleTransform ScaleX="{Binding ElementName=ZoomSlider, Path=Value}" ScaleY="{Binding ElementName=ZoomSlider, Path=Value}"/>
+                </Canvas.LayoutTransform>
+            </Canvas>
+        </ScrollViewer>
+    </DockPanel>
 </Window>

@@ -55,6 +55,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\AddTextCommand.cs" />
+    <Compile Include="Commands\DrawShapeCommand.cs" />
+    <Compile Include="Commands\IDrawCommand.cs" />
+    <Compile Include="Models\CanvasField.cs" />
+    <Compile Include="Models\CanvasLineEntity.cs" />
+    <Compile Include="Models\CanvasElement.cs" />
+    <Compile Include="Models\CanvasText.cs" />
+    <Compile Include="Models\Enums\DrawingType.cs" />
+    <Compile Include="Windows\AddTextWindow.xaml.cs">
+      <DependentUpon>AddTextWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DrawEllipseWindow.xaml.cs">
+      <DependentUpon>DrawEllipseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DrawPolygonWindow.xaml.cs">
+      <DependentUpon>DrawPolygonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ModifyShapeWindow.xaml.cs">
+      <DependentUpon>ModifyShapeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ModifyTextWindow.xaml.cs">
+      <DependentUpon>ModifyTextWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,8 +90,35 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\AddTextWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DrawEllipseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DrawPolygonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ModifyShapeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ModifyTextWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CanvasPowerEntity.cs" />
+    <Compile Include="Models\LineEntity.cs" />
+    <Compile Include="Models\NodeEntity.cs" />
+    <Compile Include="Models\Point.cs" />
+    <Compile Include="Models\PowerEntity.cs" />
+    <Compile Include="Models\SubstationEntity.cs" />
+    <Compile Include="Models\SwitchEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +143,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Geographic.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,58 @@
+﻿<Window x:Class="RG_PZ1.Windows.DrawEllipseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RG_PZ1.Windows"
+        mc:Ignorable="d"
+        Title="DrawEllipseWindow" Height="600" Width="400">
+    <Grid Background="LightGray">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="200">
+            <Border Background="DarkGray" CornerRadius="10" Margin="0,0,0,10">
+                <StackPanel Margin="10,5,10,10">
+                    <Label>Radius X</Label>
+                    <TextBox Name="tbRadiusX" />
+                </StackPanel>
+            </Border>
+            <Border Background="DarkGray" CornerRadius="10" Margin="0,0,0,10">
+                <StackPanel Margin="10,5,10,10">
+                    <Label>Radius Y</Label>
+                    <TextBox Name="tbRadiusY" />
+                </StackPanel>
+            </Border>
+            <Border Background="DarkGray" CornerRadius="10" Margin="0,0,0,10">
+                <StackPanel Margin="10,5,10,10">
+                    <Label>Fill Color</Label>
+                    <ComboBox Name="cbFillColors" />
+                </StackPanel>
+            </Border>
+            <Border Background="DarkGray" CornerRadius="10" Margin="0,0,0,10">
+                <StackPanel Margin="10,5,10,10">
+                    <Label>Border Thickness</Label>
+                    <TextBox Name="tbBorderThickness" />
+                </StackPanel>
+            </Border>
+            <Border Background="DarkGray" CornerRadius="10" Margin="0,0,0,10">
+                <StackPanel Margin="10,5,10,10">
+                    <Label>Border Color</Label>
+                    <ComboBox Name="cbBorderColors" />
+                </StackPanel>
+            </Border>
+            <Border Background="DarkGray" CornerRadius="10" Margin="0,0,0,10">
+                <StackPanel Margin="10,5,10,10">
+                    <Label>Text Content</Label>
+                    <TextBox Name="tbTextContent" />
+                </StackPanel>
+            </Border>
+            <Border Background="DarkGray" CornerRadius="10" Margin="0,0,0,10">
+                <StackPanel Margin="10,5,10,10">
+                    <Label>Text Color</Label>
+                    <ComboBox Name="cbTextColors" />
+                </StackPanel>
+            </Border>
+            <Border Background="DarkGray" CornerRadius="10" Margin="0,0,0,10">
+                <Button Margin="10,10,10,10" Name="btnDrawEllipse" Click="btnDrawEllipse_Click">Draw Ellipse</Button>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>
